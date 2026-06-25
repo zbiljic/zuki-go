@@ -77,6 +77,8 @@ go run . run
 
 ## Development
 
+This runs the root module and standalone example modules.
+
 ```sh
-go test ./...
+make test-all
 ```
