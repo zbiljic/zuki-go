@@ -53,9 +53,12 @@ type Options[C any] struct {
 
 	Logger *slog.Logger
 
-	AppOptions  []tohoapp.Option
+	// TohoOptions are applied before generated Toho wiring. Use the
+	// dedicated Options fields for app info, context, config, logger, and Fx.
 	TohoOptions []toho.Option
-	FxOptions   []fx.Option
+
+	AppOptions []tohoapp.Option
+	FxOptions  []fx.Option
 }
 
 // Runtime holds a configured Toho application and its lifecycle error channel.
@@ -86,6 +89,7 @@ func New[C any](opts Options[C]) *Runtime[C] {
 		toho.AppInfo(appInfoOptions(opts)...),
 		toho.AppCore(tohofx.NewCore()),
 		toho.Context(ctx),
+		toho.Config(cfg),
 		toho.Options(fx.Options(fxopts...)),
 	)
 	if opts.Logger != nil {
