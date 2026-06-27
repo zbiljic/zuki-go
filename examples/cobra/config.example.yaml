@@ -3,3 +3,7 @@ log:
   format: text
 http:
   addr: ":8080"
+  read_header_timeout: 2s
+  read_timeout: 10s
+  write_timeout: 10s
+  idle_timeout: 120s

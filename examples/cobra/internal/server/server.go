@@ -5,6 +5,7 @@ import (
 	"errors"
 	"log/slog"
 	"net/http"
+	"time"
 
 	"github.com/go-toho/toho/config/configfx"
 	"github.com/zbiljic/zuki-go"
@@ -18,7 +19,11 @@ var Module = fx.Options(
 )
 
 type Config struct {
-	Addr string `default:":8080" json:"addr"`
+	Addr              string        `default:":8080" json:"addr"`
+	ReadHeaderTimeout time.Duration `default:"2s" json:"read_header_timeout"`
+	ReadTimeout       time.Duration `default:"10s" json:"read_timeout"`
+	WriteTimeout      time.Duration `default:"10s" json:"write_timeout"`
+	IdleTimeout       time.Duration `default:"120s" json:"idle_timeout"`
 }
 
 func New(config Config) *http.Server {
@@ -29,8 +34,12 @@ func New(config Config) *http.Server {
 	})
 
 	return &http.Server{
-		Addr:    config.Addr,
-		Handler: mux,
+		Addr:              config.Addr,
+		Handler:           mux,
+		ReadHeaderTimeout: config.ReadHeaderTimeout,
+		ReadTimeout:       config.ReadTimeout,
+		WriteTimeout:      config.WriteTimeout,
+		IdleTimeout:       config.IdleTimeout,
 	}
 }
 

@@ -5,6 +5,7 @@ import (
 	"errors"
 	"log/slog"
 	"net/http"
+	"time"
 
 	_ "github.com/go-toho/contrib/config/vipero/viperofx"
 	"github.com/go-toho/toho/config/configfx"
@@ -19,6 +20,13 @@ type Config struct {
 type HTTPConfig struct {
 	Addr string `default:":8080" json:"addr"`
 }
+
+const (
+	defaultReadHeaderTimeout = 2 * time.Second
+	defaultReadTimeout       = 10 * time.Second
+	defaultWriteTimeout      = 10 * time.Second
+	defaultIdleTimeout       = 120 * time.Second
+)
 
 func main() {
 	cfg := Config{}
@@ -46,8 +54,12 @@ func newServer(config HTTPConfig) *http.Server {
 	})
 
 	return &http.Server{
-		Addr:    config.Addr,
-		Handler: mux,
+		Addr:              config.Addr,
+		Handler:           mux,
+		ReadHeaderTimeout: defaultReadHeaderTimeout,
+		ReadTimeout:       defaultReadTimeout,
+		WriteTimeout:      defaultWriteTimeout,
+		IdleTimeout:       defaultIdleTimeout,
 	}
 }
 
