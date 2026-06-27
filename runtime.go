@@ -28,17 +28,20 @@ const (
 )
 
 // ErrorSink reports background lifecycle errors back to the runtime.
-type ErrorSink chan<- error
+// Its zero value discards reports.
+type ErrorSink struct {
+	ch chan<- error
+}
 
 // Report queues a non-nil error without blocking.
 // If an error is already queued, later reports are dropped.
 func (s ErrorSink) Report(err error) {
-	if err == nil || s == nil {
+	if err == nil || s.ch == nil {
 		return
 	}
 
 	select {
-	case s <- err:
+	case s.ch <- err:
 	default:
 	}
 }
@@ -152,7 +155,7 @@ func starterFxOptions[C any](opts Options[C], cfg *C, errCh chan error) []fx.Opt
 	fxopts := []fx.Option{
 		slogofx.FxPrinterLogger,
 		slogofx.FxEventLogger,
-		fx.Provide(func() ErrorSink { return ErrorSink(errCh) }),
+		fx.Provide(func() ErrorSink { return ErrorSink{ch: errCh} }),
 	}
 
 	if opts.ConfigMode == ConfigModeSupplied {

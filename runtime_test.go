@@ -325,7 +325,7 @@ func TestRuntimeExposesReportedErrors(t *testing.T) {
 
 func TestErrorSinkReportDoesNotBlockWhenFull(t *testing.T) {
 	ch := make(chan error, 1)
-	sink := ErrorSink(ch)
+	sink := ErrorSink{ch: ch}
 
 	sink.Report(errors.New("first"))
 
@@ -340,4 +340,11 @@ func TestErrorSinkReportDoesNotBlockWhenFull(t *testing.T) {
 	case <-time.After(100 * time.Millisecond):
 		t.Fatal("Report blocked when the error channel was full")
 	}
+}
+
+func TestErrorSinkZeroValueReportDoesNotPanic(t *testing.T) {
+	var sink ErrorSink
+
+	sink.Report(errors.New("boom"))
+	sink.Report(nil)
 }
