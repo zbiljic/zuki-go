@@ -30,10 +30,16 @@ const (
 // ErrorSink reports background lifecycle errors back to the runtime.
 type ErrorSink chan<- error
 
-// Report sends a non-nil error to the runtime error sink.
+// Report queues a non-nil error without blocking.
+// If an error is already queued, later reports are dropped.
 func (s ErrorSink) Report(err error) {
-	if err != nil && s != nil {
-		s <- err
+	if err == nil || s == nil {
+		return
+	}
+
+	select {
+	case s <- err:
+	default:
 	}
 }
 

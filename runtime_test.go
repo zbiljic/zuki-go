@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+	"time"
 
 	_ "github.com/go-toho/contrib/config/vipero/viperofx"
 	tohoapp "github.com/go-toho/toho/app"
@@ -319,5 +320,24 @@ func TestRuntimeExposesReportedErrors(t *testing.T) {
 		}
 	default:
 		t.Fatal("expected reported error")
+	}
+}
+
+func TestErrorSinkReportDoesNotBlockWhenFull(t *testing.T) {
+	ch := make(chan error, 1)
+	sink := ErrorSink(ch)
+
+	sink.Report(errors.New("first"))
+
+	done := make(chan struct{})
+	go func() {
+		defer close(done)
+		sink.Report(errors.New("second"))
+	}()
+
+	select {
+	case <-done:
+	case <-time.After(100 * time.Millisecond):
+		t.Fatal("Report blocked when the error channel was full")
 	}
 }
