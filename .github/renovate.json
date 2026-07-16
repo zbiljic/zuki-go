@@ -6,6 +6,15 @@
     ":separateMultipleMajorReleases"
   ],
   "enabledManagers": ["github-actions", "gomod"],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**"
+  ],
   "minimumReleaseAge": "3 days",
   "packageRules": [
     {
