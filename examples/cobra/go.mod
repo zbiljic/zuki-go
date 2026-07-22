@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/go-toho/contrib v0.0.0-20260713063342-7859804cbbf1
-	github.com/go-toho/toho v0.0.0-20260710025630-f57d59064934
+	github.com/go-toho/toho v0.0.0-20260719065122-57c026bb037d
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
 	github.com/zbiljic/zuki-go v0.0.0

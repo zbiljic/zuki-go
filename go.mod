@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/go-toho/contrib v0.0.0-20260713063342-7859804cbbf1
-	github.com/go-toho/toho v0.0.0-20260710025630-f57d59064934
+	github.com/go-toho/toho v0.0.0-20260719065122-57c026bb037d
 	go.uber.org/fx v1.24.0
 )
 
