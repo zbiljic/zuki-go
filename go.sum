@@ -4,8 +4,8 @@ github.com/frankban/quicktest v1.14.6 h1:7Xjx+VpznH+oBnejlPUj8oUpdxnVs4f8XU8WnHk
 github.com/frankban/quicktest v1.14.6/go.mod h1:4ptaffx2x8+WTWXmUCuVU6aPUX1/Mz7zb5vbUoiM6w0=
 github.com/fsnotify/fsnotify v1.9.0 h1:2Ml+OJNzbYCTzsxtv8vKSFD9PbJjmhYF14k/jKC7S9k=
 github.com/fsnotify/fsnotify v1.9.0/go.mod h1:8jBTzvmWwFyi3Pb8djgCCO5IBqzKJ/Jwo8TRcHyHii0=
-github.com/go-toho/contrib v0.0.0-20260723131005-f8b054ecbf7d h1:fgJcX0HgmQ/wcXdP0EjcMuDnsojL2aBbM3Ug+HfObrU=
-github.com/go-toho/contrib v0.0.0-20260723131005-f8b054ecbf7d/go.mod h1:ddF5UPAH7LSBY97k4d4OMYAyDnqHiMcsl05So4anDPw=
+github.com/go-toho/contrib v0.0.0-20260727112957-f9e10d000b89 h1:zamQzBY37K8vx27NTHP4VYKYC9PIZbaH2TUJwPByBBM=
+github.com/go-toho/contrib v0.0.0-20260727112957-f9e10d000b89/go.mod h1:s4keTls+g6PglEBOnIYiDOIPbYfBxRbB0eIWW2BUaYY=
 github.com/go-toho/toho v0.0.0-20260719065122-57c026bb037d h1:3nwxPv3RjYRMMamoM9XOF/Nh29gYjcFwX+dzltmSGqI=
 github.com/go-toho/toho v0.0.0-20260719065122-57c026bb037d/go.mod h1:9rxeO70+IIjkJXhSfhMQsKsizjqzgewUTeMqbWkRrIU=
 github.com/go-viper/mapstructure/v2 v2.5.0 h1:vM5IJoUAy3d7zRSVtIwQgBj7BiWtMPfmPEgAXnvj1Ro=
