@@ -7,8 +7,8 @@ github.com/fsnotify/fsnotify v1.9.0 h1:2Ml+OJNzbYCTzsxtv8vKSFD9PbJjmhYF14k/jKC7S
 github.com/fsnotify/fsnotify v1.9.0/go.mod h1:8jBTzvmWwFyi3Pb8djgCCO5IBqzKJ/Jwo8TRcHyHii0=
 github.com/go-toho/contrib v0.0.0-20260727112957-f9e10d000b89 h1:zamQzBY37K8vx27NTHP4VYKYC9PIZbaH2TUJwPByBBM=
 github.com/go-toho/contrib v0.0.0-20260727112957-f9e10d000b89/go.mod h1:s4keTls+g6PglEBOnIYiDOIPbYfBxRbB0eIWW2BUaYY=
-github.com/go-toho/toho v0.0.0-20260719065122-57c026bb037d h1:3nwxPv3RjYRMMamoM9XOF/Nh29gYjcFwX+dzltmSGqI=
-github.com/go-toho/toho v0.0.0-20260719065122-57c026bb037d/go.mod h1:9rxeO70+IIjkJXhSfhMQsKsizjqzgewUTeMqbWkRrIU=
+github.com/go-toho/toho v0.0.0-20260816015648-9f99aecc8fa0 h1:zQxw4KFwP8ov7a/FKeUxoQUrdwiqOlXIR+dU9C2NqSI=
+github.com/go-toho/toho v0.0.0-20260816015648-9f99aecc8fa0/go.mod h1:JuRjaobqoVb7BDZtaJXSNPgbhLUU+5xQPp6Rg4gtB3U=
 github.com/go-viper/mapstructure/v2 v2.5.0 h1:vM5IJoUAy3d7zRSVtIwQgBj7BiWtMPfmPEgAXnvj1Ro=
 github.com/go-viper/mapstructure/v2 v2.5.0/go.mod h1:oJDH3BJKyqBA2TXFhDsKDGDTlndYOZ6rGS0BRZIxGhM=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
