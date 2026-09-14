@@ -1,9 +1,9 @@
 module github.com/zbiljic/zuki-go
 
-go 1.25.0
+go 1.26.0
 
 require (
-	github.com/go-toho/contrib v0.0.0-20260907045347-02a9443704c3
+	github.com/go-toho/contrib v0.0.0-20260911211028-d7bf3f8dee5f
 	github.com/go-toho/toho v0.0.0-20260904032034-71a63b86b106
 	go.uber.org/fx v1.24.0
 )
@@ -23,6 +23,6 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.28.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	golang.org/x/sys v0.47.0 // indirect
-	golang.org/x/text v0.41.0 // indirect
+	golang.org/x/sys v0.48.0 // indirect
+	golang.org/x/text v0.42.0 // indirect
 )
