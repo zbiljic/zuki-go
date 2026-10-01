@@ -3,7 +3,7 @@ module github.com/zbiljic/zuki-go
 go 1.26.0
 
 require (
-	github.com/go-toho/contrib v0.0.0-20260923195336-dea38b9f6839
+	github.com/go-toho/contrib v0.0.0-20260928205215-2eb30522047f
 	github.com/go-toho/toho v0.0.0-20260904032034-71a63b86b106
 	go.uber.org/fx v1.24.0
 )
