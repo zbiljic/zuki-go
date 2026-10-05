@@ -3,7 +3,7 @@ module github.com/zbiljic/zuki-go/examples/cobra
 go 1.26.0
 
 require (
-	github.com/go-toho/contrib v0.0.0-20260928205215-2eb30522047f
+	github.com/go-toho/contrib v0.0.0-20261001215909-ca3b3960bcc8
 	github.com/go-toho/toho v0.0.0-20260904032034-71a63b86b106
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
