@@ -3,7 +3,7 @@ module github.com/zbiljic/zuki-go/examples/cobra
 go 1.26.0
 
 require (
-	github.com/go-toho/contrib v0.0.0-20261001215909-ca3b3960bcc8
+	github.com/go-toho/contrib v0.0.0-20261017204101-03201372e40f
 	github.com/go-toho/toho v0.0.0-20261011014023-71283cac67fa
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
@@ -26,8 +26,8 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.28.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	golang.org/x/sys v0.48.0 // indirect
-	golang.org/x/text v0.42.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 )
 
 replace github.com/zbiljic/zuki-go => ../..
